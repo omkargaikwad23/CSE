@@ -1,0 +1,93 @@
+Enter the number of references you want to add: 14
+Enter the frame size you want: 3
+
+Enter a reference: 7
+Enter a reference: 0
+Enter a reference: 1
+Enter a reference: 2
+Enter a reference: 0
+Enter a reference: 3
+Enter a reference: 0
+Enter a reference: 4
+Enter a reference: 2
+Enter a reference: 3
+Enter a reference: 0
+Enter a reference: 3
+Enter a reference: 2
+Enter a reference: 3
+
+
+
+Menu:
+1. Get Page Faults with FIFO method: 
+2. Get Page Faults with Optimal Page Replacement: 
+3. Get Page Faults with Least Recently Used:      
+4. Change the input Reference string:
+5. Change the number of frames:
+6. Exit
+
+Enter your choice: 1
+Element 7 has generated page fault. (Frame limit not exceeded)
+Element 0 has generated page fault. (Frame limit not exceeded)
+Element 1 has generated page fault. (Frame limit not exceeded)
+Element 2 has generated page fault by replacing 7
+Element 3 has generated page fault by replacing 0
+Element 0 has generated page fault by replacing 1
+Element 4 has generated page fault by replacing 2
+Element 2 has generated page fault by replacing 3
+Element 3 has generated page fault by replacing 0
+Element 0 has generated page fault by replacing 4
+
+The Number of page faults found using FIFO method is: 10
+
+Menu:
+1. Get Page Faults with FIFO method:
+2. Get Page Faults with Optimal Page Replacement:
+3. Get Page Faults with Least Recently Used:
+4. Change the input Reference string:
+5. Change the number of frames:
+6. Exit
+
+Enter your choice: 2
+Element 7 has generated page fault. (Frame limit not exceeded)
+Element 0 has generated page fault. (Frame limit not exceeded)
+Element 1 has generated page fault. (Frame limit not exceeded)
+Element 2 has generated page fault by replacing 7
+Element 3 has generated page fault by replacing 1
+Element 4 has generated page fault by replacing 0
+Element 0 has generated page fault by replacing 4
+
+The Number of page faults found using Optimal Replacement method is: 7
+
+Menu:
+1. Get Page Faults with FIFO method:
+2. Get Page Faults with Optimal Page Replacement:
+3. Get Page Faults with Least Recently Used:
+4. Change the input Reference string:
+5. Change the number of frames:
+6. Exit
+
+Enter your choice: 3
+Element 7 has generated page fault. (Frame limit not exceeded)
+Element 0 has generated page fault. (Frame limit not exceeded)
+Element 1 has generated page fault. (Frame limit not exceeded)
+Element 2 has generated page fault by replacing 7
+Element 3 has generated page fault by replacing 1
+Element 4 has generated page fault by replacing 2
+Element 2 has generated page fault by replacing 3
+Element 3 has generated page fault by replacing 0
+Element 0 has generated page fault by replacing 4
+
+The Number of page faults found using Least Recently Used Replacement method is: 9
+
+Menu:
+1. Get Page Faults with FIFO method:
+2. Get Page Faults with Optimal Page Replacement:
+3. Get Page Faults with Least Recently Used:
+4. Change the input Reference string:
+5. Change the number of frames:
+6. Exit
+
+Enter your choice: 6
+
+Good Bye!!!

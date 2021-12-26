@@ -1,8 +1,7 @@
-// #include <stdio.h>
-// #include <string.h>
-// #include <iostream>
-// #include <stdlib.h>
-#include <bits/stdc++.h>
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 struct rr
@@ -26,6 +25,7 @@ int main()
     strcpy(proc[i].state, "active");
   }
 
+  // sorting the process based on priority
   for (i = 0; i < n - 1; i++)
   {
     for (j = 0; j < n - 1; j++)
@@ -36,23 +36,23 @@ int main()
         int t = proc[j].prior;
         proc[j].prior = proc[j + 1].prior;
         proc[j + 1].prior = t;
+
         strcpy(ch, proc[j].name);
         strcpy(proc[j].name, proc[j + 1].name);
         strcpy(proc[j + 1].name, ch);
       }
     }
   }
+  for (i = 0; i < n; i++)
+    cout << "\n" << proc[i].name << "\t" << proc[i].prior;
+
+  // find current max priority process
+  // and it will be the coordinator
   int min = 0;
   for (i = 0; i < n; i++)
-    cout << "\n"
-         << proc[i].name << "\t" << proc[i].prior;
-  for (i = 0; i < n; i++)
   {
-    for (i = 0; i < n; i++)
-    {
-      if (min < proc[i].prior)
-        min = proc[i].prior;
-    }
+    if (min < proc[i].prior)
+      min = proc[i].prior;
   }
   for (i = 0; i < n; i++)
   {
@@ -63,6 +63,7 @@ int main()
       break;
     }
   }
+
   int pr;
   while (1)
   {
@@ -90,7 +91,7 @@ int main()
           pr = proc[i].prior;
         }
       }
-      // send msg from him to higher processes
+      // send msg from him to all higher processes
       for (i = 0; i < n; i++)
       {
         if (pr < proc[i].prior)
@@ -127,12 +128,13 @@ int main()
         // repeat the same if ok msg is received
         goto l1;
       }
+
       m = 0;
       for (j = 0; j < n; j++)
       {
         if (proc[j].prior > m && strcmp(proc[j].state, "active") == 0)
         {
-          cout << "\nprocess " << proc[j].name << " is select as new coordinator";
+          cout << "\nprocess " << proc[j].name << " is selected as new coordinator";
           strcpy(proc[j].state, "inactive");
           break;
         }

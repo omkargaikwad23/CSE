@@ -108,7 +108,7 @@ class BestFit:
                     if var == -1:
                         var = j
                     elif self.block[var] > self.block[j]:
-                        var = j
+                        var = j    #index of min size block greater than process size
             if var != -1:
                 self.allocation[i] = var
                 self.block[var] -= self.process[i]
@@ -168,7 +168,7 @@ class WorstFit:
                     if var1 == -1:
                         var1 = j
                     elif self.block[var1] < self.block[j]:
-                        var1 = j
+                        var1 = j  #index of max size block greater than process size
             if var1 != -1:
                 self.allocation[i] = var1
                 self.block[var1] -= self.process[i]

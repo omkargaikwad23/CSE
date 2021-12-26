@@ -158,8 +158,8 @@ public class passOne {
 			String token[] = line.split("\\s+"); // Tokenize the input file
 			if (!token[0].isEmpty()) {
 				if (SYMTAB.containsKey(token[0])) // Check if symbol table already has the token
-					SYMTAB.put(token[0], new Row(token[0], lc, SYMTAB.get(token[0]).getIndex())); // Insert data into
-																									// symbol table
+					SYMTAB.put(token[0], new Row(token[0], lc, SYMTAB.get(token[0]).getIndex())); 
+					// Insert data into symbol table
 				else
 					SYMTAB.put(token[0], new Row(token[0], lc, ++symIndex)); // Modify data of symbol table
 			}
@@ -217,6 +217,7 @@ public class passOne {
 				bw.write(code + "\n"); // Write code to intermediate code text file
 				lc = lc + size; // Incremenet LC by size
 			}
+
 			if (lookup.getType(token[1]).equals("IS")) // If type of token is IS
 			{
 				code = "(IS,0" + lookup.getCode(token[1]) + ")\t"; // Get the OPCode and generate first part of

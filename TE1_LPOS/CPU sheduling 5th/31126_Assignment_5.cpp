@@ -320,7 +320,13 @@ void PriorityScheduler(Process P[], int jobCount){
   sort(P, P+jobCount, compareByPriority);
   float avgWaitTime = 0, avgTurnAroundTime = 0;
 
-  
+  for(int i=0; i<jobCount; i++){
+    p[i].setCompletionTime(p[i].getArrivalTime() + p[i].getBurstTime());
+    p[i].setTurnAroundTime(p[i].getCompletionTime() - p[i].getArrivalTime());
+    p[i].setWaitingTime(p[i].getTurnAroundTime() - p[i].getBurstTime());
+    avgWaitTime += P[i].getWaitingTime();
+    avgTurnAroundTime += P[i].getTurnAroundTime();
+  }
 
   avgWaitTime = (float)avgWaitTime / jobCount;
   avgTurnAroundTime = (float)avgTurnAroundTime / jobCount;
