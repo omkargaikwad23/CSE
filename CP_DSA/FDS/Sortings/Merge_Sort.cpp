@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
-// merge sort sorting algorithm
+/* 
+merge sort sorting algorithm
+time: O(nlog(n)) in all cases
+space: O(n)
+*/
 
 void merge(int *Arr, int start, int mid, int end) {
 	
@@ -22,7 +26,7 @@ void merge(int *Arr, int start, int mid, int end) {
 		}
 	}
 
-	// add elements left in the first interval 
+	// add elements left (remaining) in the first interval 
 	while(i <= mid) {
 		temp[k] = Arr[i];
 		k += 1; i += 1;

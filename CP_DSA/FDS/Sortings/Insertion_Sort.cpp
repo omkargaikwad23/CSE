@@ -1,25 +1,24 @@
-#include <stdlib.h>
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-// member functions declaration
 void insertionSort(int arr[], int length);
 
-// main function
 int main()
 {
-	int array[6] = {5, 1, 6, 2, 4, 3};
-
-	for(int i=0; i<6; i++){
-		cout << array[i] << " ";
+	int n;
+	cout << "Enter size of array: ";
+	cin >> n;
+	int array[n];
+	cout << "Enter array elements: " << "\n";
+	for(int i=0; i<n; i++){
+		cin >> array[i];
 	}
 	cout << "\n...................\n" << endl;
 
-	insertionSort(array, 6);
-	cout << "Sorted Array: ";
+	insertionSort(array, n);
+	cout << "\nSorted Array: ";
 	
-	for(int i=0; i<6; i++){
+	for(int i=0; i<n; i++){
 		cout << array[i] << " ";
 	}
 	return 0;
